@@ -18,7 +18,7 @@ def getFileList(config, startDate, time, geom, member):
 
 def downloadFiles(files):
 ## Run this block if you want to download all 120 files for given parameters
-"""
+    """
     for fileName in files:
         url = 'https://apps.hydroshare.org/apps/nwm-data-explorer/api/GetFile?file=' + fileName # Downloads all files
         response = urllib2.urlopen(url)
@@ -26,17 +26,17 @@ def downloadFiles(files):
 
         with open(fileName, 'w') as f:
             f.write(fileContent)
-"""
+    """
 
 ## Run this block if you want to download one (files[n]) of the files for given parameters
-"""
+    """
     url = 'https://apps.hydroshare.org/apps/nwm-data-explorer/api/GetFile?file=' + files[0] # Downloads the first file
     response = urllib2.urlopen(url)
     fileContent = response.read()
 
     with open(files[0], 'w') as f:
         f.write(fileContent)
-"""
+    """
 
 ### Program starts here ###
 
